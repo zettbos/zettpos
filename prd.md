@@ -174,10 +174,13 @@ Sistem memiliki 2 tingkatan hak akses berbasis proteksi PIN cepat:
 ================================================================================
 ZONA BAWAH: MASTER CONTEXT & LOGIKA SISTEM TERKINI (LIVING CONTEXT)
 ================================================================================
-- **Status Arsitektur:** Sistem ZettPOS v1.0.0 selesai dibangun penuh (Ready to Deploy).
-- **Tech Stack Aktif:** Google Apps Script + Google Sheets (Monolith: `code.gs`, `setup.gs`, `index.html`).
+- **Status Arsitektur:** Sistem ZettPOS v1.0.0 selesai dibangun penuh & live di production.
+- **Repositori Resmi GitHub:** https://github.com/zettbos/zettpos
+- **URL Domain Produksi Vercel:** https://zettpos.vercel.app
+- **Tech Stack Aktif:** Google Apps Script + Google Sheets (Backend) & Vercel Static Web App (Frontend).
 - **Skema Database Aktif:** Tab `Produk`, `Transaksi`, `DetailTransaksi`, `Kategori`, `Pengaturan` (Semua nama tab bebas underscore).
 - **Logika Penomoran:** `INV-YYYYMM-XXX` sekuensial aman via LockService & mutasi atomik stok.
 - **Riwayat Perubahan:**
   - [2026-11-16] Pembuatan cetak biru spesifikasi produk awal (PRD).
-  - [2026-11-16] Implementasi penuh berkas `setup.gs` (safe migration & seed), `code.gs` (backend API, LockService, SpreadsheetApp.flush), dan `index.html` (UI POS, responsive cart, thermal receipt, WA nota, master produk & laporan laba).
+  - [2026-11-16] Implementasi penuh berkas `setup.gs`, `code.gs`, dan `index.html`.
+  - [2026-11-16] Inisialisasi Git, pembuatan repositori GitHub `zettbos/zettpos`, dan deployment ke domain Vercel `https://zettpos.vercel.app`.
